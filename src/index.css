@@ -1,0 +1,270 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Beautiful Purple, White, Black Design System */
+
+@layer base {
+  :root {
+    /* Main Background & Foreground */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 5%;
+
+    /* Purple Theme Colors */
+    --primary: 253 87% 67%;  /* Beautiful Purple #8B5CF6 */
+    --primary-foreground: 0 0% 100%;
+    --primary-dark: 253 87% 57%;  /* Darker Purple */
+    --primary-light: 253 87% 77%; /* Lighter Purple */
+
+    /* Secondary Colors */
+    --secondary: 0 0% 10%;  /* Deep Black */
+    --secondary-foreground: 0 0% 100%;
+
+    /* Accent & Interactive */
+    --accent: 253 87% 67%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Cards & Surfaces */
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 5%;
+    --card-dark: 0 0% 5%;
+    --card-dark-foreground: 0 0% 100%;
+
+    /* Glass Effect */
+    --glass-bg: 253 87% 67% / 0.1;
+    --glass-border: 253 87% 67% / 0.2;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(253 87% 67%), hsl(253 87% 57%));
+    --gradient-hero: linear-gradient(135deg, hsl(253 87% 67%), hsl(0 0% 5%));
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 100% / 0.1), hsl(253 87% 67% / 0.1));
+
+    /* Shadows */
+    --shadow-purple: 0 10px 30px hsl(253 87% 67% / 0.3);
+    --shadow-glow: 0 0 40px hsl(253 87% 67% / 0.4);
+    --shadow-elegant: 0 20px 40px hsl(0 0% 0% / 0.1);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    /* Utility Colors */
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 253 87% 67%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground overflow-x-hidden;
+  }
+}
+
+@layer components {
+  /* Glassmorphism Effects */
+  .glass {
+    @apply bg-white/10 backdrop-blur-lg border border-white/20;
+  }
+
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-md border border-purple-500/20 rounded-2xl;
+  }
+
+  /* Gradient Backgrounds */
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  /* Button Variants */
+  .btn-hero {
+    @apply bg-primary hover:bg-primary-dark text-primary-foreground px-8 py-4 rounded-2xl font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-purple-500/25;
+  }
+
+  .btn-glass {
+    @apply glass text-white hover:bg-white/20 px-6 py-3 rounded-xl transition-all duration-300 hover:scale-105;
+  }
+
+  /* Text Animations */
+  .text-glow {
+    text-shadow: 0 0 20px hsl(253 87% 67% / 0.5);
+  }
+
+  /* Rocket Animation */
+  .rocket-fly {
+    animation: rocketFly 6s ease-in-out infinite;
+  }
+
+  .rocket-trail {
+    animation: trail 6s ease-in-out infinite;
+  }
+
+  /* Quote Animation */
+  .quote-reveal {
+    animation: quoteReveal 3s ease-out forwards;
+  }
+
+  /* Navigation Link Hover */
+  .nav-link {
+    @apply relative transition-all duration-300 hover:text-primary;
+  }
+
+  .nav-link::after {
+    @apply content-[''] absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+}
+
+@layer utilities {
+  /* Keyframe Animations */
+  @keyframes rocketFly {
+    0%, 100% { 
+      transform: translateY(0px) rotate(0deg); 
+    }
+    25% { 
+      transform: translateY(-30px) rotate(-5deg); 
+    }
+    50% { 
+      transform: translateY(-60px) rotate(5deg); 
+    }
+    75% { 
+      transform: translateY(-30px) rotate(-3deg); 
+    }
+  }
+
+  @keyframes trail {
+    0%, 100% { 
+      opacity: 0.8; 
+      transform: scale(1); 
+    }
+    50% { 
+      opacity: 0.4; 
+      transform: scale(1.2); 
+    }
+  }
+
+  @keyframes quoteReveal {
+    0% { 
+      opacity: 0; 
+      transform: translateY(30px); 
+    }
+    50% { 
+      opacity: 0.5; 
+      transform: translateY(15px); 
+    }
+    100% { 
+      opacity: 1; 
+      transform: translateY(0); 
+    }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+
+  .animate-slide-in-right {
+    animation: slideInRight 0.8s ease-out forwards;
+  }
+
+  /* Responsive Text Sizes */
+  .text-hero {
+    @apply text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold;
+  }
+
+  .text-subtitle {
+    @apply text-lg sm:text-xl lg:text-2xl;
+  }
+}
