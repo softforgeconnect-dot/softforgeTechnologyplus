@@ -126,9 +126,9 @@ const Dashboard = () => {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">P. Anil </h3>
-                <p className="text-primary font-medium mb-3">Co-Founter And CEO</p>
-                <p className="text-gray-300 text-sm">Leading strategic vision and operational excellence with 10+ years of industry experience.</p>
+                <h3 className="text-xl font-semibold text-white mb-2">Anil Phugare </h3>
+                <p className="text-primary font-medium mb-3">CEO</p>
+                <p className="text-gray-300 text-sm">leads A Softforge Technology Pvt. Ltd. with a strategic vision that drives operational excellence and sustainable growth. With over 10 years of industry experience in software development and technology leadership, he spearheads innovative solutions tailored to educational and mobile ecosystems, ensuring the company stays at the forefront of digital transformation.</p>
               </div>
               
               <div className="glass-card p-8 text-center hover:scale-105 transition-transform duration-300">
@@ -139,9 +139,9 @@ const Dashboard = () => {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">Z. Anil </h3>
-                <p className="text-primary font-medium mb-3">Director</p>
-                <p className="text-gray-300 text-sm">Driving innovation and growth with expertise in mobile technology and educational solutions.</p>
+                <h3 className="text-xl font-semibold text-white mb-2">Anil Zunjare</h3>
+                <p className="text-primary font-medium mb-3">Director, Marketing Head</p>
+                <p className="text-gray-300 text-sm">A Softforge Technology Pvt. Ltd.'s marketing initiatives, fostering innovation and accelerating growth through his deep expertise in mobile technology and educational solutions. His strategic campaigns enhance brand visibility and user engagement, bridging cutting-edge tech with real-world educational needs.</p>
               </div>
                <div className="glass-card p-8 text-center hover:scale-105 transition-transform duration-300">
                 <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-primary/30">
@@ -151,9 +151,9 @@ const Dashboard = () => {
                     className="w-full h-full object-cover "
                   />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">K. Satish </h3>
-                <p className="text-primary font-medium mb-3">Director – Technology & Solutions</p>
-                <p className="text-gray-300 text-sm">At A Unique Technology Pvt. Ltd, our Technical Advisers play a pivotal role in driving innovation and excellence in our Android and iOS mobile application development, with a focus on school student tracking and administration solutions.</p>
+                <h3 className="text-xl font-semibold text-white mb-2">Satish Y. K.</h3>
+                <p className="text-primary font-medium mb-3">IT Head</p>
+                <p className="text-gray-300 text-sm">IT Head at A Softforge Technology Pvt. Ltd., where he plays a pivotal role in driving innovation and technical excellence. Specializing in Android and iOS mobile application development, he oversees the creation of robust school student tracking and administration solutions, ensuring seamless, scalable systems that empower educational institutions.</p>
               </div>
               
               <div className="glass-card p-8 text-center hover:scale-105 transition-transform duration-300">
@@ -164,9 +164,9 @@ const Dashboard = () => {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">A. Mukesh</h3>
-                <p className="text-primary font-medium mb-3">IT Head </p>
-                <p className="text-gray-300 text-sm">Crafting compelling brand strategies and driving market expansion with creative excellence.</p>
+                <h3 className="text-xl font-semibold text-white mb-2">Mukesh Ambatwar</h3>
+                <p className="text-primary font-medium mb-3">HR Dept Head</p>
+                <p className="text-gray-300 text-sm">cultivating a dynamic talent ecosystem that supports organizational expansion and employee empowerment. With a focus on strategic people management, he crafts inclusive policies and development programs, driving team performance and fostering a culture of creative excellence in a fast-paced tech environment.</p>
               </div>
             </div>
           </div>

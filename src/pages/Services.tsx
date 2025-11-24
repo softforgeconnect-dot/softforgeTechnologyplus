@@ -89,17 +89,17 @@ const Services = () => {
     {
       title: "Mobile Apps",
       description: "Native and cross-platform mobile applications",
-      features: ["iOS & Android", "React Native", "UI/UX Design", "App Store Optimization"]
+      features: ["iOS & Android Application", "React Native Application", "UI/UX Resposive Design ", "App Store Optimization"]
     },
     {
       title: "Cloud Services",
       description: "We Provide all the related Cloud service with customer satisfation ",
-      features: ["Amazon Web Services", "Google Cloud Platform", "Manual Server " ]
+      features: ["Amazon Web Services", "Google Cloud Platform", "Azure ", "Manual Server " ]
     },
     {
       title: "Digital Marketing",
       description: "Strategic marketing campaigns that drive real results",
-      features: ["Social Media Marketing", "Content Strategy", "PPC Campaigns", "Analytics & Reporting"]
+      features: ["Social Media Marketing", "Content Strategy", "PPC Campaigns", "Analytics & Reporting","AI Support Marketing"]
     },
     {
       title: "Brand Strategy",
