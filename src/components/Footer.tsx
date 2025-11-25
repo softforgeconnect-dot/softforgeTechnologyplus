@@ -9,7 +9,7 @@ const Footer = () => {
     <footer className="bg-secondary text-white py-12">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-          
+
           {/* Company Info */}
           <div className="space-y-6">
             <div className="flex items-center space-x-3">
@@ -23,7 +23,7 @@ const Footer = () => {
                 Softforge Technology
               </span>
             </div>
-            
+
             <p className="text-gray-300 max-w-xs leading-relaxed">
               "Empowering Innovation With Next-Gen Tech."
             </p>
@@ -36,10 +36,10 @@ const Footer = () => {
               <a href="#" aria-label="Twitter" className="text-gray-400 hover:text-white transition-colors">
                 <Twitter className="h-5 w-5" />
               </a>
-              <a href="#" aria-label="Instagram" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://www.instagram.com/softforge_technology?igsh=MTYzY3pxd21zbWlvcg==" aria-label="Instagram" className="text-gray-400 hover:text-white transition-colors">
                 <Instagram className="h-5 w-5" />
               </a>
-              <a href="#" aria-label="LinkedIn" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://www.linkedin.com/company/softforge-technology-private-limited/" aria-label="LinkedIn" className="text-gray-400 hover:text-white transition-colors">
                 <Linkedin className="h-5 w-5" />
               </a>
             </div>

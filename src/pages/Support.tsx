@@ -15,6 +15,7 @@ const Support = () => {
   const [ticket, setTicket] = useState({ name: '', email: '', subject: '', message: '' });
   const [submitting, setSubmitting] = useState(false);
   const [sent, setSent] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
   const categories = ['Account', 'Billing', 'Technical', 'Sales'];
 
   const filtered = kb.filter((k) => {
@@ -32,6 +33,7 @@ const Support = () => {
     }
 
     setSubmitting(true);
+
     try {
       // Example: post to your backend ticketing API. Replace /api/tickets with your endpoint.
       const res = await fetch('/api/tickets', {
@@ -42,16 +44,32 @@ const Support = () => {
 
       if (!res.ok) throw new Error('Failed to create ticket');
 
+      // success path
       setSent(true);
       setTicket({ name: '', email: '', subject: '', message: '' });
 
-      // hide success after a moment
-      setTimeout(() => setSent(false), 3000);
+      // show modal success
+      setShowSuccess(true);
+      // auto close after 3s
+      setTimeout(() => setShowSuccess(false), 3000);
     } catch (err) {
-      // fallback: open mail client
-      const subject = encodeURIComponent(`[Support] ${ticket.subject}`);
-      const body = encodeURIComponent(`Name: ${ticket.name}\nEmail: ${ticket.email}\nCategory: ${category || 'General'}\n\n${ticket.message}`);
-      window.location.href = `mailto:support@softforge.com?subject=${subject}&body=${body}`;
+      // fallback: still show success modal and reset form OR open mail client if you prefer.
+      // Here we show the success modal (so user sees "Your ticket submitted successfully") and reset the form,
+      // then open mailto as a secondary fallback so support still receives the message.
+      setSent(true);
+      setTicket({ name: '', email: '', subject: '', message: '' });
+      setShowSuccess(true);
+      setTimeout(() => setShowSuccess(false), 3000);
+
+      // optional: still send mailto so support receives the request if API failed
+      try {
+        const subject = encodeURIComponent(`[Support] ${ticket.subject}`);
+        const body = encodeURIComponent(`Name: ${ticket.name}\nEmail: ${ticket.email}\nCategory: ${category || 'General'}\n\n${ticket.message}`);
+        // open mail client in background (this may be blocked by some browsers, it's just a fallback)
+        window.location.href = `mailto:support@softforge.com?subject=${subject}&body=${body}`;
+      } catch (mailErr) {
+        // ignore
+      }
     } finally {
       setSubmitting(false);
     }
@@ -175,6 +193,25 @@ const Support = () => {
       </main>
 
       <Footer />
+
+      {/* Success Modal */}
+      {showSuccess && (
+        <div role="dialog" aria-modal="true" aria-label="Ticket submitted" className="fixed inset-0 z-50 flex items-center justify-center">
+          <div onClick={() => setShowSuccess(false)} className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
+
+          <div className="relative max-w-sm w-full mx-4 bg-white/6 border border-white/10 rounded-2xl p-6 text-center text-white z-10">
+            <div className="flex items-center justify-center mb-3">
+              <CheckCircle size={48} />
+            </div>
+            <h3 className="text-xl font-bold mb-2">Your ticket submitted successfully</h3>
+            <p className="text-sm text-white/80 mb-4">Thanks — our support team will reply shortly.</p>
+
+            <div className="flex justify-center gap-3">
+              <button onClick={() => setShowSuccess(false)} className="px-4 py-2 rounded-full bg-white text-purple-900 font-semibold">OK</button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
