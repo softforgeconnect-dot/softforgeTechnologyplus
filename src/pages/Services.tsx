@@ -44,7 +44,7 @@ const Services: React.FC = () => {
       <main className="pt-8 pb-20">
         {/* Hero */}
         <section className="max-w-5xl mx-auto px-4 text-center">
-          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight mb-4">Our Services</h1>
+          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight mt-10 mb-4">Our Services</h1>
           <p className="text-gray-300 max-w-3xl mx-auto">
             Comprehensive digital solutions to propel your business to new heights. End-to-end development,
             cloud, marketing and brand strategy tailored for measurable results.
