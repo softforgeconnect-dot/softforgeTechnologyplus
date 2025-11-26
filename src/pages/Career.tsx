@@ -4,7 +4,7 @@ import Footer from '@/components/Footer';
 import { Mail, Briefcase, MapPin, Clock } from 'lucide-react';
 
 const jobs = [
-  /* ... (keep your jobs array unchanged) ... */
+  /* . */
   {
     id: '1',
     title: 'Frontend Engineer (React/TypeScript)',
