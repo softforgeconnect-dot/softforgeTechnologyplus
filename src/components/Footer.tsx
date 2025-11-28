@@ -52,7 +52,7 @@ const Footer = () => {
               <li><NavLink to="/" className="text-gray-300 hover:text-primary transition-colors block">Home</NavLink></li>
               <li><NavLink to="/services" className="text-gray-300 hover:text-primary transition-colors block">Services</NavLink></li>
               <li><NavLink to="/digital-marketing" className="text-gray-300 hover:text-primary transition-colors block">Digital Marketing</NavLink></li>
-              <li><NavLink to="/blog" className="text-gray-300 hover:text-primary transition-colors block">Blog</NavLink></li>
+              <li><NavLink to="/internship" className="text-gray-300 hover:text-primary transition-colors block">Internship</NavLink></li>
               <li><NavLink to="/career" className="text-gray-300 hover:text-primary transition-colors block">Career</NavLink></li>
             </ul>
           </div>

@@ -12,7 +12,7 @@ const Header = () => {
     { name: 'Home', path: '/' },
     { name: 'Digital Marketing', path: '/digital-marketing' },
     { name: 'Services', path: '/services' },
-    { name: 'Blog', path: '/blog' },
+    { name: 'Internship', path: '/internship' },
     { name: 'Career', path: '/career' },
     { name: 'Contact', path: '/contact' },
     { name: 'Support', path: '/support' },
@@ -88,7 +88,7 @@ const Header = () => {
                   to={item.path}
                   onClick={() => setIsMenuOpen(false)}
                   className={({ isActive }) =>
-                    `block py-3 px-6 text-lg font-medium transition-colors ${
+                    `internship py-3 px-6 text-lg font-medium transition-colors ${
                       isActive
                         ? 'text-primary bg-primary/10 border-l-4 border-primary'
                         : 'text-white hover:text-primary hover:bg-white/5'
@@ -103,14 +103,14 @@ const Header = () => {
                 <NavLink
                   to="/signin"
                   onClick={() => setIsMenuOpen(false)}
-                  className="block text-white hover:text-primary font-medium"
+                  className="internship text-white hover:text-primary font-medium"
                 >
                   Sign In
                 </NavLink>
                 <NavLink
                   to="/signup"
                   onClick={() => setIsMenuOpen(false)}
-                  className="block text-center py-3 bg-primary/20 border border-primary/50 rounded-lg text-white font-semibold hover:bg-primary/30 transition"
+                  className="internship text-center py-3 bg-primary/20 border border-primary/50 rounded-lg text-white font-semibold hover:bg-primary/30 transition"
                 >
                   Sign Up
                 </NavLink>

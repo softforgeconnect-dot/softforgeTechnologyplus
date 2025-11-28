@@ -8,7 +8,7 @@ import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
 import Services from "./pages/Services";
 import DigitalMarketing from "./pages/DigitalMarketing";
-import Blog from "./pages/Blog";
+ import Internship from "./pages/Internship";
 import Career from "./pages/Career";
 import Contact from "./pages/Contact";
 import Support from "./pages/Support";
@@ -32,7 +32,7 @@ const App = () => (
           <Route path="/signup" element={<SignUp />} />
           <Route path="/services" element={<Services />} />
           <Route path="/digital-marketing" element={<DigitalMarketing />} />
-          <Route path="/blog" element={<Blog />} />
+          <Route path="/Internship" element={<Internship />} />
           <Route path="/career" element={<Career />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/support" element={<Support />} />
