@@ -272,12 +272,12 @@ const ApplyModal: React.FC<ApplyModalProps> = ({ open, onClose, role }) => {
         <h2 className="text-2xl font-bold mb-4">Apply for {role}</h2>
 
         <form onSubmit={handleSubmit} className="space-y-3">
-          <input name="fullName" placeholder="Full Name" value={formData.fullName} onChange={handleChange} className="w-full p-2 border rounded" required />
-          <input name="email" placeholder="Email" value={formData.email} onChange={handleChange} className="w-full p-2 border rounded" required />
-          <input name="mobile" placeholder="Mobile" value={formData.mobile} onChange={handleChange} className="w-full p-2 border rounded" required />
-          <input name="stream" placeholder="Stream" value={formData.stream} onChange={handleChange} className="w-full p-2 border rounded" required />
-          <input name="college" placeholder="College" value={formData.college} onChange={handleChange} className="w-full p-2 border rounded" required />
-          <textarea name="address" placeholder="Address" value={formData.address} onChange={handleChange} className="w-full p-2 border rounded" required />
+          <input name="fullName" placeholder="Full Name" value={formData.fullName} onChange={handleChange} className=" mr-2 w-full p-1 border rounded-xl" required />
+          <input name="email" placeholder="Email" value={formData.email} onChange={handleChange} className="w-full p-1 border rounded-xl" required />
+          <input name="mobile" placeholder="Mobile" value={formData.mobile} onChange={handleChange} className="w-full p-1 border rounded-xl" required />
+          <input name="stream" placeholder="Stream" value={formData.stream} onChange={handleChange} className="w-full p-1 border rounded-xl" required />
+          <input name="college" placeholder="College" value={formData.college} onChange={handleChange} className="w-full p-1 border rounded-xl" required />
+          <textarea name="address" placeholder="Address" value={formData.address} onChange={handleChange} className="w-full p-1 border rounded-xl" required />
           <input name="resume" type="file" className="w-full" onChange={handleFileChange} />
 
           <div className="flex justify-end gap-3 mt-4">
@@ -327,7 +327,7 @@ const EmailModal: React.FC<{ open: boolean; onClose: () => void }> = ({ open, on
 
           <div className="flex justify-end gap-3 mt-4">
             <button type="button" onClick={onClose} className="px-4 py-2 bg-gray-300 rounded">Cancel</button>
-            <button type="submit" className="px-4 py-2 bg-green text-white rounded">Send</button>
+            <button type="submit" className="px-4 py-2 bg-green-600 text-white rounded">Send</button>
           </div>
         </form>
       </div>
