@@ -32,17 +32,17 @@ const Hero = () => {
         ))}
       </div>
 
-      <div className="container mx-auto px-4 relative z-10 mt-20 mb-3">
+      <div className="container mx-auto px-4 relative z-10 mt-10 mb-3">
         <div className="grid lg:grid-cols-2 gap-12 items-center"> {/* Fixed: was lg:grid-cols-1 */}
           
           {/* Content Section */}
           <div className="text-center lg:text-left space-y-8 order-2 lg:order-1">
             <div className="space-y-6">
-              <h3 className="text-4xl md:text-5xl text-white font-bold leading-tight animate-fade-in-up mb-10">
+              <h1 className="text-5xl text-white font-bold leading-tight animate-fade-in-up mb-20">
                 Welcome To Softforge Technology
-              </h3>
+              </h1>
 
-              <span className=" text-whiteblock mb-6 text-lg ">
+              <span className="  text-white mb-6 text-lg ">
                 "Softforge Technology Pvt. Ltd, we believe every student’s journey deserves to be tracked with care and precision..."
               </span>
 

@@ -123,7 +123,7 @@ const Dashboard = () => {
                   <img 
                     src={directorImg} 
                     alt="Director" 
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover mt-1"
                   />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">Anil Phugare </h3>
