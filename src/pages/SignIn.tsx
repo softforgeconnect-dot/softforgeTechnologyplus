@@ -7,6 +7,7 @@ import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { AlertDialog, AlertDialogAction, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from '@/components/ui/alert-dialog';
 import * as Yup from 'yup';
+import CompDashboard from './company/CompDashboard';
 
 // Yup Validation Schema
 const validationSchema = Yup.object({
@@ -53,6 +54,7 @@ const SignIn = () => {
 
       // Mock: Check credentials (replace with real API)
       const isValidUser =
+        //formData.email === 'softforgeconnect@gmail.com' &&
         formData.email === 'softforgeconnect@gmail.com' &&
         formData.password === '12345Softforge#';
 
